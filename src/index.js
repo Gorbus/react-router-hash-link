@@ -18,7 +18,8 @@ function reset() {
 function getElAndScroll() {
   const element = document.getElementById(hashFragment);
   if (element !== null) {
-    element.scrollIntoView();
+    const id = '#' + hashFragment;
+    $(id).animatedScroll({easing: "easeOutExpo"});
     reset();
     return true;
   }
